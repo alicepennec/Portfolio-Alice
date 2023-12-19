@@ -149,6 +149,7 @@
                             padding-right: 10px;
                             text-decoration: underline;
                             cursor: pointer;
+                            color: $mainColor;
 
                             @include mobile{
                                 font-size: 10px;
