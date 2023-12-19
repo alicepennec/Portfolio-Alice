@@ -1,0 +1,120 @@
+@import "../../global.scss";
+
+.intro{
+    background-color: white;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+
+        .imgContainer{
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: right;
+
+            @include mobile{
+                align-items: flex-start;
+            }
+
+            img{
+                height: 70%;
+                
+                @include mobile{
+                    height: 40%;
+                    margin-top: 40px;
+
+                }
+            }
+        }
+    }
+
+    .right{
+        flex: 0.5;
+        overflow: hidden;
+        position: relative;
+
+        .wrapper{
+            width: 90%;
+            height: 100%;
+            margin-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: justify;
+
+            @include mobile {
+                padding: 0;
+                align-items: center;
+                margin-left: 20px;
+                justify-content: start;
+            }
+
+            h1{
+                font-size: 60px;
+                margin: 20px 0;
+
+                @include mobile{
+                    font-size: 40px;
+                }
+            }
+            h2{
+                font-size: 35px;
+            }
+            h3{
+                font-size: 30px;
+
+                @include mobile{
+                    font-size: 20px;
+                }
+
+                span{
+                    font-size: inherit;
+                    color: #daa803;
+                }
+            }
+            h4{
+                font-size: 15px;
+                margin: 20px 0;
+
+                a{
+                    text-decoration: none;
+                }
+                    span{
+                    font-size: inherit;
+                    color: #daa803;
+                    
+                }
+
+                @include mobile{
+                    margin: 10px 30px;
+                }
+            }
+        }
+        a.icon{
+            position: absolute;
+            bottom: 50px;
+            left: 40%;
+
+            img{
+                width: 60px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
